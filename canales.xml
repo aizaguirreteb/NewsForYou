@@ -1,0 +1,36 @@
+<canales>
+    <canal>
+        <nombre>Barrapunto</nombre>
+        <url>http://barrapunto.com/index.rss</url>
+        <logo>img/barrapunto_logo.png</logo>
+        <tipo>RSS</tipo>
+        <categoria>software libre</categoria>
+        <categoria>tecnología</categoria>
+        <categoria>derechos digitales</categoria>
+    </canal>
+    <canal>
+        <nombre>Ideal Jaén</nombre>
+        <url>https://www.ideal.es/rss/2.0/?section=jaen</url>
+        <logo>img/ideal_logo.png</logo>
+        <tipo>RSS</tipo>
+        <categoria>noticias</categoria>
+    </canal>
+    <canal>
+        <nombre>SlashDot Mobile</nombre>
+        <url>http://rss.slashdot.org/Slashdot/slashdotMobile</url>
+        <logo>img/slashdot_logo.png</logo>
+        <tipo>RSS</tipo>
+        <categoria>móviles</categoria>
+        <categoria>tecnología</categoria>
+        <categoria>telefonía</categoria>
+    </canal>
+        
+    <canal>
+        <nombre>Medium - Top stories</nombre
+        ><url>https://medium.com/feed/the-story</url>
+        <tipo>RSS</tipo>
+        <logo>img/medium_logo.png</logo>
+        <categoria>tecnología</categoria>
+        <categoria>ciencia</categoria>
+    </canal>
+</canales>

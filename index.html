@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html lang=es-ES>
+
+<head>
+  <!--To show all the letters in Spanish properly-->
+  <meta charset="UTF-8">
+  <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+  <!--<meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+
+
+  <!--Mobile options-->
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+
+  <!--Import Google Icon Font-->
+  <link href="css/materialicons.css" rel="stylesheet">
+
+  <!--Stylesheet-->
+  <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <!--title for the app-->
+  <title>NewsForYou</title>
+
+</head>
+
+<body class="original-theme">
+
+  <!--Navigation bar for big screens-->
+  <div class="nav-bar">
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#panel_home" class="brand-logo">NewsForYou</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="large material-icons">menu</i></a>
+
+        </div>
+      </nav>
+    </div>
+
+    <!--Side menu with image for small screens-->
+    <ul class="sidenav" id="mobile-demo">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img alt="" class="responsive-img" src="img/XYNAJ859MK.jpg">
+          </div>
+          <br />
+          <br>
+          <br>
+          <br>
+        </div>
+      </li>
+      <li><a href="#" id="sidebar_home" class="sidenav-close sidebar"><i class="material-icons">home</i>Home</a>
+      </li>
+      <li><a href="#" id="sidebar_channelList" class="sidenav-close sidebar"><i class="material-icons">list</i>Mis
+          Canales</a>
+      </li>
+
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header">Gestión de Canales<i class="material-icons">arrow_downward</i></a>
+            <div class="original-theme collapsible-body">
+              <ul>
+                <li><a href="#" id="sidebar_add" class="sidenav-close sidebar"><i
+                      class="material-icons">add_circle</i>Añadir</a>
+                </li>
+                <li><a href="#" id="sidebar_delete" class="sidenav-close sidebar"><i
+                      class="material-icons">delete_sweep</i>Borrar</a>
+                </li>
+                <li><a href="#" id="sidebar_listaUpdate" class="sidenav-close sidebar"><i
+                      class="material-icons">sync</i>Actualizar</a>
+                </li>
+
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#" id="sidebar_listapredefinidos" class="sidenav-close sidebar"><i
+            class="material-icons">storage</i>Nuestros canales</a>
+      </li>
+
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li><a href="#" id="sidebar_adjustements" class="sidenav-close sidebar"><i
+            class="material-icons">settings</i>Ajustes</a>
+      </li>
+      <li><a href="#" id="sidebar_about" class="sidenav-close sidebar"><i class="material-icons">info</i>Sobre la
+          app</a>
+      </li>
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li>
+        <!--<div class="center-align">
+          <h6>Modo Noche</h6>
+        </div>-->
+        <div id="btn_night" class="switch center-align">
+          <label>
+            <i class="material-icons">brightness_low</i>
+            <input type="checkbox">
+            <span class="lever"></span>
+            <i class="material-icons">brightness_2</i>
+          </label>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+
+
+  <!--HOME VIEW-->
+  <div id="panel_home" class="panel">
+    <div class='center-align'>
+      <h1><strong>BIENVENIDO</strong></h1>
+      <br>
+      
+      <h5> Matente informado de la última <strong>actualidad</strong> de tus canales favoritos en una sola aplicación.
+        Añade tus propios
+        canales o busca los que más te interesen de nuestra oferta en
+        <strong>Nuestros Canales.</strong> </h5>
+    </div>
+
+
+  </div>
+
+
+  <!--LIST OF CHANNELS-->
+  <div id="panel_channelList" class="panel">
+    <h5 class="center-align"><strong>Mis Canales</strong></h5>
+    <div id="verListaCanales"></div>
+
+
+
+  </div>
+
+  <!--ADD CHANNEL VIEW-->
+  <div id="panel_add" class="panel">
+      <h5 class="center-align"><strong>Añadir Canal</strong></h5>
+    <br>
+    <div class="row">
+      <div class="center-align col s12">
+        <div class="input-field">
+          <input id="form_alta_nombre" type="text" class="validate">
+          <label for="form_alta_nombre">NOMBRE</label>
+        </div>
+        <div class="input-field">
+          <input id="form_alta_url" type="url" class="validate">
+          <label for="form_alta_url">URL</label>
+          <span class="helper-text" data-error="Format not valid" data-success="Valid URL format"></span>
+        </div>
+      </div>
+      <div class="right-align col s12">
+        <button class="btn-floating btn-large waves-effect waves-light center-align" id="form_alta_btn_aceptar"
+          type="submit" name="action">
+          <i id="btn_add_icon" class="material-icons center">add</i>
+        </button>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!--DELETE CHANNEL-->
+  <div id="panel_delete" class="panel">
+      <h5 class="center-align"><strong>Borrar Canales</strong></h5>
+    <div id='listaBorrado'>
+
+    </div>
+
+  </div>
+
+  <!--UPDATE CHANNEL-->
+  <div id="panel_listaUpdate" class='panel'>
+      <h5 class="center-align"><strong>Actualizar Canales</strong></h5>
+    <div id="listaCanalesActualizar" class="center-align"></div>
+  </div>
+
+  <div id="panel_update" class="panel">
+    <h5 class='center-align' style='font-weight:bold'>Actualizar Canal</h5>
+    <div id='form_update'></div>
+
+  </div>
+
+  <!--INFO ABOUT APP-->
+  <div id="panel_about" class="panel">
+    
+    <br>
+    <h5 class="center-align"><strong>NewsForYou</strong> es una app gratuita, sin ánimo de lucro, para leer noticias de
+      forma rápida y eficiente.</h5>
+    <br>
+
+    <div>
+      <h4 class="center-align"><i class="material-icons left-align">help_outlined</i> <strong>Preguntas
+          Frecuentes</strong>
+      </h4>
+    </div>
+
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header"><i class="material-icons">keyboard_arrow_right</i><strong>¿Cómo puedo añadir un
+            canal?</strong></div>
+        <div class="collapsible-body"><span>Para añadir un canal es necesario buscar la dirección del feed del canal de
+            noticias que quieres añadir. Para ello te recomendamos buscar el canal de noticias seguido de la palabra 'rss'.
+            Una vez la encuentres, sólo copia el enlace y pégalo en la sección 'URL' de la pestaña <i
+              class="material-icons">add_circle</i>'Añadir Canal' dentro de 'Gestión de Canales'</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">keyboard_arrow_right</i><strong>La luminosidad de la
+            app y el fondo blanco me molestan para leer, ¿puedo cambiar el color de la app?</strong></div>
+        <div class="collapsible-body"><span>Sí, en la pestaña <i class="material-icons">settings</i>'Ajustes' puedes
+            encontrar una opción para el modo noche <i class="material-icons">brightness_2</i>. También lo tienes en el menú desplegable.</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">keyboard_arrow_right</i><strong>¿Puedo borrar canales
+            de la lista ofertada?</strong></div>
+        <div class="collapsible-body"><span>No, no es posible borrar canales de los que ofertamos en la app. El proceso
+            de búsqueda de feeds de canales de noticias
+            no es fácil para todos los usuarios, por eso ofrecemos una lista de canales predefinidos. <i
+              class="material-icons">sentiment_dissatisfied</i>
+          </span></div>
+      </li>
+    </ul>
+
+    <div>
+      <h4 class="center-align"><strong>Contacto</strong></h4>
+      <h5 class="center-align"><i class="material-icons">language</i><strong><a href='https://aizaguirreteb.github.io/'>
+            Alejandra Izaguirre </a></strong></h5>
+    </div>
+
+
+
+
+  </div>
+
+  <div id="panel_adjustements" class="panel">
+    <div>
+      <h4 class="center-align"><strong>Temas</strong></h4>
+    </div>
+
+    <!-- Switch -->
+    <div class="center-align">
+      <h6>Modo Noche</h6>
+    </div>
+    <div id="btn_night_2" class="switch center-align">
+      <label>
+          <i style="color:black" class="material-icons">brightness_low</i>
+          <input type="checkbox">
+          <span class="lever"></span>
+          <i style="color:black" class="material-icons">brightness_2</i>
+      </label>
+    </div>
+  </div>
+
+  <!--PANEL TO VIEW NEWS-->
+  <div id="panel_viewNews" class="panel">
+    <div id="tablaNoticias"></div>
+  </div>
+
+  <!--OUR CHANNELS-->
+  <div id="panel_listapredefinidos" class="panel">
+      <h5 class="center-align"><strong>Nuestros Canales</strong></h5>
+
+  </div>
+
+
+  <!--Modals options-->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4 style='-webkit-text-fill-color:rgb(9, 9, 14)'>¿Seguro que quieres borrar el canal?</h4>
+
+    </div>
+    <div class="modal-footer">
+      <a  style='-webkit-text-fill-color:chocolate' href="#!" id="btn_aceptar_borrado" class="modal-close waves-effect waves-green btn-flat">Borrar</a>
+      <a style='-webkit-text-fill-color:chocolate' href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+    </div>
+  </div>
+
+  <!--JS & JQuery-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/controlador.js"></script>
+  <script src="js/canales.js"></script>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
