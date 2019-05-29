@@ -27,6 +27,21 @@ $(document).ready(function () {
         //$.controlador.initClassListado('panel_delete');
     });
 
+    $("#form_buscar_predefinidos").on('input',function(){
+        console.log($("#form_buscar_predefinidos").val());
+        $.predefinidos.filtra($("#form_buscar_predefinidos").val());
+        });
+
+    $("#sidebar_listapredefinidos").click(() => {
+
+        $.predefinidos.cargarPredefinidos($.canales.lista);
+       // $.controlador.initClassNoticias('panel_channelList');
+       
+      
+    });
+
+    
+
     //$("#btn_aceptar_borrado").click(()=>{
     //$.controlador.borrarCanal(indice);
     //});

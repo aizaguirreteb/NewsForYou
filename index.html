@@ -247,7 +247,10 @@
             de la lista ofertada?</strong></div>
         <div class="collapsible-body"><span>No, no es posible borrar canales de los que ofertamos en la app. El proceso
             de búsqueda de feeds de canales de noticias
-            no es fácil para todos los usuarios, por eso ofrecemos una lista de canales predefinidos. <i
+            no es fácil para todos los usuarios, por eso ofrecemos una lista de canales predefinidos.
+            En los canales predefinidos puedes buscar por la categoría del canal y si pinchas en la estrella lo añadimos a tu lista
+            de canales.
+            <i
               class="material-icons">sentiment_dissatisfied</i>
           </span></div>
       </li>
@@ -292,6 +295,21 @@
   <div id="panel_listapredefinidos" class="panel">
       <h5 class="center-align"><strong>Nuestros Canales</strong></h5>
 
+      <form id="buscar_predefinidos">
+          <div class="row">
+              <div class="center-align col s12">
+                <div class="input-field">
+                  <input id="form_buscar_predefinidos" type="text" class="validate">
+                  <label for="form_buscar_predefinidos">CATEGORIA</label>
+                </div>
+                </div>
+        <!--Metemos el input de la búsqueda-->
+      </form>
+
+      <div id="lista_predefinidos">
+
+      </div>
+
   </div>
 
 
@@ -310,6 +328,7 @@
   <!--JS & JQuery-->
   <script src="js/jquery.min.js"></script>
   <script src="js/materialize.min.js"></script>
+  <script src="js/predefinidos.js"></script>
   <script src="js/controlador.js"></script>
   <script src="js/canales.js"></script>
   <script src="js/index.js"></script>

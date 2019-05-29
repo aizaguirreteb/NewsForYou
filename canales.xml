@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <canales>
     <canal>
         <nombre>Barrapunto</nombre>
@@ -24,13 +25,166 @@
         <categoria>tecnología</categoria>
         <categoria>telefonía</categoria>
     </canal>
-        
     <canal>
-        <nombre>Medium - Top stories</nombre
-        ><url>https://medium.com/feed/the-story</url>
+        <nombre>Medium - Top stories</nombre>
+        <url>https://medium.com/feed/the-story</url>
         <tipo>RSS</tipo>
         <logo>img/medium_logo.png</logo>
         <categoria>tecnología</categoria>
         <categoria>ciencia</categoria>
     </canal>
+
+
+    <canal>
+        <nombre>BBC International</nombre>
+        <url>http://feeds.bbci.co.uk/news/rss.xml?edition=int</url>
+        <tipo>RSS</tipo>
+        <logo>img/rss_feed_circle_std.png</logo>
+        <categoria>noticias</categoria>
+        <categoria>internacional</categoria>
+    </canal>
+
+    <canal>
+        <nombre>Science News Headlines</nombre>
+        <url>https://www.sciencenews.org/feeds/headlines.rss</url>
+        <tipo>RSS</tipo>
+        <logo>img/rss_feed_circle_std.png</logo>
+        <categoria>ciencia</categoria>
+    </canal>
+
+    <canal>
+        <nombre>Microsiervos</nombre>
+        <url>http://www.microsiervos.com/index.xml</url>
+        <tipo>RSS</tipo>
+        <logo>img/rss_feed_circle_std.png</logo>
+        <categoria>tecnología</categoria>
+        <categoria>noticias</categoria>
+    </canal>
+
+
+    <canal>
+        <nombre>Fox News</nombre>
+        <url>http://feeds.foxnews.com/foxnews/latest</url>
+        <tipo>RSS</tipo>
+        <logo>img/rss_feed_circle_std.png</logo>
+        <categoria>noticias</categoria>
+    </canal>
+
+
+    <canal>
+        <nombre>Hackers News</nombre>
+        <url>https://edavis.github.io/hnrss/</url>
+        <tipo>RSS</tipo>
+        <logo>img/rss_feed_circle_std.png</logo>
+        <categoria>informática</categoria>
+        <categoria>seguridad</categoria>
+        <categoria>noticias</categoria>
+    </canal>
+
+    <canal>
+        <nombre>Planet Money</nombre>
+        <url>https://www.npr.org/rss/podcast.php?id=510289</url>
+        <tipo>RSS</tipo>
+        <logo>img/rss_feed_circle_std.png</logo>
+        <categoria>economía</categoria>
+    </canal>
+
+    <canal>
+        <nombre>Reddit</nombre>
+        <url>http://www.reddit.com/.rss</url>
+        <tipo>ATOM</tipo>
+        <logo>img/rss_feed_circle_std.png</logo>
+        <categoria>tecnología</categoria>
+        <categoria>ciencia</categoria>
+    </canal>
+
+
+    <canal>
+        <nombre>Reuters International</nombre>
+        <url>http://feeds.reuters.com/Reuters/worldNews</url>
+        <tipo>RSS</tipo>
+        <logo>img/rss_feed_circle_std.png</logo>
+        <categoria>noticias</categoria>
+    </canal>
+
+
+    <canal>
+        <nombre>Wall Street Journal</nombre>
+        <url>https://feeds.a.dj.com/rss/RSSWorldNews.xml</url>
+        <tipo>RSS</tipo>
+        <logo>img/rss_feed_circle_std.png</logo>
+        <categoria>noticias</categoria>
+        <categoria>economía</categoria>
+    </canal>
+
+
+    <canal>
+        <nombre>Revista Dirección General de Tráfico</nombre>
+        <url>http://revista.dgt.es/es/rss/noticias.xml</url>
+        <tipo>RSS</tipo>
+        <logo>img/rss_feed_circle_std.png</logo>
+        <categoria>tráfico</categoria>
+        <categoria>noticias</categoria>
+    </canal>
+
+
+    <canal>
+        <nombre>DGT - El tráfico</nombre>
+        <url>http://infocar.dgt.es/etraffic/rss_ca_1.xml</url>
+        <tipo>RSS</tipo>
+        <logo>img/rss_feed_circle_std.png</logo>
+        <categoria>tráfico</categoria>
+        <categoria>estado de las carreteras</categoria>
+    </canal>
+
+
+    <canal>
+        <nombre>AEMET Avisos Andalucía</nombre>
+        <url>http://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/rss/CAP_AFAC61_ATOM.xml</url>
+        <tipo>RSS</tipo>
+        <logo>img/rss_feed_circle_std.png</logo>
+        <categoria>metereología</categoria>
+        <categoria>el tiempo</categoria>
+    </canal>
+
+
+    <canal>
+        <nombre>AEMET Noticias</nombre>
+        <url>http://www.aemet.es/ca/noticias.rss</url>
+        <tipo>RSS</tipo>
+        <logo>img/rss_feed_circle_std.png</logo>
+        <categoria>metereología</categoria>
+        <categoria>el tiempo</categoria>
+        <categoria>noticias</categoria>
+    </canal>
+
+
+
+    <canal>
+        <nombre>Periodista Digital</nombre>
+        <url>http://www.periodistadigital.com/periodistadigital.rss</url>
+        <tipo>RSS</tipo>
+        <logo>img/rss_feed_circle_std.png</logo>
+        <categoria>noticias</categoria>
+    </canal>
+
+
+    <canal>
+        <nombre>El Mundo - Portada</nombre>
+        <url>http://estaticos.elmundo.es/elmundo/rss/portada.xml</url>
+        <tipo>RSS</tipo>
+        <logo>img/rss_feed_circle_std.png</logo>
+        <categoria>noticias</categoria>
+    </canal>
+
+
+    <canal>
+        <nombre>Marca</nombre>
+        <url>https://e00-marca.uecdn.es/rss/portada.xml</url>
+        <tipo>RSS</tipo>
+        <logo>img/rss_feed_circle_std.png</logo>
+        <categoria>deportes</categoria>
+    </canal>
+
+
 </canales>

@@ -217,7 +217,7 @@ $.controlador.mostrarNoticiasRSS = function (xml, indice) {
             x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
             "</strong></h6></div><div class='collapsible-body'><span>" +
             x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue +
-            "<div><p style='color:grey'>" + x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue + "</p></div><div><a href='" + x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue + "'>Ver Noticia</a></div><span></div></li>");
+            "<div><p style='color:grey'>" + x[i].getElementsByTagName("pubDate")[0].childNodes[0].nodeValue + "</p></div><div><a target='_blank' href='" + x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue + "'>Ver Noticia</a></div><span></div></li>");
         lista.append(item);
     }
 
@@ -262,7 +262,7 @@ $.controlador.mostrarNoticiasATOM = function (xml, indice) {
             x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
             "</strong></h6></div><div class='collapsible-body'><span>" +
             x[i].getElementsByTagName("summary")[0].childNodes[0].nodeValue +
-            "<div><p style='color:grey'>" + x[i].getElementsByTagName("updated")[0].childNodes[0].nodeValue + "</p></div><a href='" + x[i].getElementsByTagName("id")[0].childNodes[0].nodeValue + "'>Ver Noticia</a><span></div></li>");
+            "<div><p style='color:grey'>" + x[i].getElementsByTagName("updated")[0].childNodes[0].nodeValue + "</p></div><a target='_blank' href='" + x[i].getElementsByTagName("id")[0].childNodes[0].nodeValue + "'>Ver Noticia</a><span></div></li>");
         lista.append(item);
     }
 
@@ -385,3 +385,5 @@ $.controlador.mostrarPanelActualizarCanal = function (indice) {
 
 
 }
+
+
